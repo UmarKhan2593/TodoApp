@@ -1,0 +1,12 @@
+E:\OiPubTets-main\OiPubTets-main\Domain\bin\Debug\net5.0\Domain.deps.json
+E:\OiPubTets-main\OiPubTets-main\Domain\bin\Debug\net5.0\Domain.dll
+E:\OiPubTets-main\OiPubTets-main\Domain\bin\Debug\net5.0\Domain.pdb
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.dll
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\refint\Domain.dll
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\Domain.pdb
+E:\OiPubTets-main\OiPubTets-main\Domain\obj\Debug\net5.0\ref\Domain.dll
