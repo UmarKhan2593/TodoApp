@@ -44,3 +44,12 @@
 /TaskManager.Presentation.Web.Infrastructure/obj/project.nuget.cache
 /TaskManager.Presentation.Web.Infrastructure/obj/project.assets.json
 /TaskManager.Presentation.Web.Infrastructure/obj/Debug/net6.0/TaskManager.Presentation.Web.Infrastructure.assets.cache
+/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/Application/obj/Debug/net6.0/Application.assets.cache
+/Domain/bin/Debug/net6.0/Domain.pdb
+/Domain/bin/Debug/net6.0/Domain.dll
+/Infrastructure/obj/Debug/net6.0/Infrastructure.csproj.AssemblyReference.cache
+/Domain/obj/Debug/net6.0/Domain.pdb
+/Domain/obj/Debug/net6.0/Domain.dll
+/Domain/obj/Debug/net6.0/Domain.csproj.FileListAbsolute.txt
+/OiPub.API/obj/Debug/net6.0/TaskManager.API.csproj.AssemblyReference.cache
