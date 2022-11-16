@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "SignUp confirmation";
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-5 ">
+        <div class="account-wall text-center py-5 mt-5">
+
+            <a asp-area="Consumer" asp-controller="Home" asp-action="Index">
+                <img class="profile-img" src="~/img/giftlocal.png" alt="GiftLocal">
+            </a>
+
+            <h1>You are <b>Registered</b>!</h1>
+            <p class="mb-4">Please check your email to confirm your account.</p>
+            <p class="mb-3">
+                Go Back to
+                <a asp-area="Consumer" asp-controller="Home" asp-action="Index" class="text-center new-account">Home</a>
+            </p>
+        </div>
+    </div>
+</div>

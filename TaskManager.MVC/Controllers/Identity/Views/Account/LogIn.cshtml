@@ -1,0 +1,55 @@
+﻿@model TaskManager.Presentation.Web.Infrastructure.Requests.Identity.Token.TokenRequest
+
+@{
+    ViewData["Title"] = "Log In";
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+
+
+<div class="row">
+
+    <div class="col-md-6 offset-md-3 mt-5 ">
+        <div class="account-wall text-center py-5 mt-5">
+
+            <a asp-area="Consumer" asp-controller="Home" asp-action="Index">
+                <img class="profile-img" src="~/img/giftlocal.png" alt="GiftLocal">
+            </a>
+            <h1>Log In</h1>
+            <p class="mb-4">Log In with your data that you entered during your registration.</p>
+
+            <form class="form-signin" asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="custom-inputs">
+                    <div class="form-group">
+                        <input asp-for="Email" class="form-control mb-4" placeholder="@Html.DisplayNameFor(x=>x.Email)" required autofocus>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Password" class="form-control mb-2" placeholder="@Html.DisplayNameFor(x=>x.Password)" required>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="remember mb-4 mt-3">
+                    <div class="form-group form-check">
+                        <label class="form-check-label checkbox text-left">
+                            <input type="checkbox" class="form-check-input" value="remember-me">
+                            Keep me logged in
+                        </label>
+                    </div>
+                    <a asp-action="ForgotPassword" class="need-help">Forgot Password? </a>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Log In" class="btn btn-lg  btn-block mb-3" />
+                </div>
+                <p class="mb-3">Don’t have an account? <a asp-area="Identity" asp-action="SignUp" class="text-center new-account">Sign Up </a> </p>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

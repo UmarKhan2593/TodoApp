@@ -25,4 +25,8 @@
     <ProjectReference Include="..\TaskManager.Presentation.Web.Infrastructure\TaskManager.Presentation.Web.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Identity\Models\" />
+  </ItemGroup>
+
 </Project>

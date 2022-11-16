@@ -1,0 +1,100 @@
+﻿@model TaskManager.Presentation.Web.Infrastructure.Requests.Identity.User.EditUserRequest
+
+@{
+    ViewData["Title"] = "Edit User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mt-5">
+    <form asp-controller="User" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                @*<div class="form-group">
+                        <label asp-for="Logo" class="control-label"></label>
+                        <input asp-for="Logo" class="form-control" />
+                        <span asp-validation-for="Logo" class="text-danger"></span>
+                    </div>*@
+
+                <div class="form-group">
+                    <label asp-for="UploadRequest.DataFile" class="control-label"></label>
+                    <input asp-for="Logo" type="hidden" />
+                    <input asp-for="UploadRequest.DataFile"
+                           onchange="loadImage(this)"
+                           accept=".png,.jpg,.jpeg,.gif,.tif"
+                           class="form-control" />
+                    <span asp-validation-for="UploadRequest.DataFile" class="text-danger"></span>
+                </div>
+             @*   <div class="col-lg-6 col-sm-12 mb-4">
+                    <label asp-for="UploadRequest.DataFile" class="">
+                        <img id="viewableImage"
+                             class="viewableImage img-fluid border p-2"
+                             src="@((string.IsNullOrWhiteSpace(Model.Logo)) ? "/img/placeholder.png": Url.Content(@UploadPath.RequestPath+Model.Logo) )"
+                             alt="">
+                    </label>
+                </div>*@
+                @*<div class="form-group ">
+                        <div class="form-check">
+                            <input class="form-check-input" asp-for="IsActive" />
+                            <label class="form-check-label">
+                                @Html.DisplayNameFor(model => model.IsActive)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="EmailConfirmed" /> @Html.DisplayNameFor(model => model.EmailConfirmed)
+                        </label>
+                    </div>*@
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <div class="form-group ">
+                    <input type="submit" value="SAVE" class="btn btn-primary" asp-action="Edit" />
+                    <input type="submit" value="SUSPEND" class="btn suspended" asp-action="Delete" />
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

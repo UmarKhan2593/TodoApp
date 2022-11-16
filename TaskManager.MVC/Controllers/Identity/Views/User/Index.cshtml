@@ -1,0 +1,63 @@
+﻿@using TaskManager.Presentation.Web.Infrastructure.Responses.Identity.User
+@model IEnumerable<GetAllUsersResponse>
+@{
+    ViewData["Title"] = "Manage User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="home" class="tab-pane fade show active mt-5">
+    <div class="table-responsive">
+
+        <table id="cityTable" class="table table-borderless custom-table w-100">
+            <thead>
+                <tr>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </th>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                   <th scope="col">
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="custom-tbody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section Scripts {
+
+
+    <script>
+        $(document).ready(function () {
+            let dataTable = new registerDataTable('cityTable');
+            dataTable.dataURL = '/User/GetReportData'
+            dataTable.methodType = 'POST'
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.FirstName)", "@nameof(GetAllUsersResponse.FirstName)", null, true, "@Url.Action("Edit")" ,"btn btn-link","@nameof(GetAllUsersResponse.Id)",20);
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.LastName)", "@nameof(GetAllUsersResponse.LastName)", null, true);
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.Email)", "@nameof(GetAllUsersResponse.Email)", null, true);
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.PhoneNumber)", "@nameof(GetAllUsersResponse.PhoneNumber)", null, true);
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.UserName)", "@nameof(GetAllUsersResponse.UserName)", null, true);
+            dataTable.addColumn("@Html.DisplayNameFor(model => model.Status)", "@nameof(GetAllUsersResponse.Status)", null, true);
+            dataTable.Create();
+        });
+
+
+    </script>
+
+
+}
