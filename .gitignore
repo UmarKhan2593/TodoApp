@@ -34,3 +34,13 @@
 /Shared/obj/project.nuget.cache
 /Shared/obj/project.assets.json
 /Shared/obj/Debug/net6.0/Shared.assets.cache
+/TaskManager.MVC/obj/TaskManager..Presentation.Web.csproj.nuget.g.props
+/TaskManager.MVC/obj/TaskManager..Presentation.Web.csproj.nuget.dgspec.json
+/TaskManager.MVC/obj/project.nuget.cache
+/TaskManager.MVC/obj/project.assets.json
+/TaskManager.MVC/obj/Debug/net6.0/TaskManager..Presentation.Web.assets.cache
+/TaskManager.Presentation.Web.Infrastructure/obj/TaskManager.Presentation.Web.Infrastructure.csproj.nuget.g.props
+/TaskManager.Presentation.Web.Infrastructure/obj/TaskManager.Presentation.Web.Infrastructure.csproj.nuget.dgspec.json
+/TaskManager.Presentation.Web.Infrastructure/obj/project.nuget.cache
+/TaskManager.Presentation.Web.Infrastructure/obj/project.assets.json
+/TaskManager.Presentation.Web.Infrastructure/obj/Debug/net6.0/TaskManager.Presentation.Web.Infrastructure.assets.cache
