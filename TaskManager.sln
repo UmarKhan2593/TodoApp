@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.API", "OiPub.API\TaskManager.API.csproj", "{B471F364-9939-48B6-A51C-176F169EBE2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager..Presentation.Web", "TaskManager.MVC\TaskManager..Presentation.Web.csproj", "{656F9BF7-C7C7-4702-A533-835257FED6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Presentation.Web", "TaskManager.MVC\TaskManager.Presentation.Web.csproj", "{656F9BF7-C7C7-4702-A533-835257FED6F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApplication", "WebApplication", "{C76E5BA3-F45B-4AAB-9227-22AE0780262B}"
 EndProject

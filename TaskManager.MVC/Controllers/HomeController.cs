@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using TaskManager.MVC.Models;
 
-namespace TaskManager.MVC.Controllers
+namespace TaskManager.Presentation.Web.Controllers
 {
     public class HomeController : Controller
     {
