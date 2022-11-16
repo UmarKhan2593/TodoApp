@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj": {}
+    "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj": {
+    "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\obj\\",
+        "projectPath": "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\faisa\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\Project\\TodoList\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\faisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://innroad.jfrog.io/innroad/api/nuget/innroad-NuGet-local": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
