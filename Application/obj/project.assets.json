@@ -595,19 +595,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\faisa\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Data\\Project\\TodoList\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\New folder\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\Data\\Project\\TodoList\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\faisa\\.nuget\\packages\\",
-      "outputPath": "D:\\Data\\Project\\TodoList\\Application\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\New folder\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\New folder\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\faisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -615,14 +615,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://innroad.jfrog.io/innroad/api/nuget/innroad-NuGet-local": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Data\\Project\\TodoList\\Domain\\Domain.csproj"
+            "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Desktop\\New folder\\Domain\\Domain.csproj"
             }
           }
         }
