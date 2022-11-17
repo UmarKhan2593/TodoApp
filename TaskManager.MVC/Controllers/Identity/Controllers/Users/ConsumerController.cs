@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace TaskManager.Presentation.Web.Controllers.Admin.Identity.Users
 {
     [Area(nameof(Identity))]
-    [Authorize(Policy = CustomPolicyNames.Admin)]
+    [Authorize(Policy = CustomPolicyNames.Manager)]
     public class ConsumerController : BaseController<ConsumerController>
     {
         private readonly IUserManager _userManager;

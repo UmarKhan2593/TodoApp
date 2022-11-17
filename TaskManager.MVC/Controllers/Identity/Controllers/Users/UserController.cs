@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace TaskManager.Presentation.Web.Controllers.Admin.Identity.Users
 {
     [Area(nameof(Identity))]
-    [Authorize(Policy =CustomPolicyNames.Admin)]
+    [Authorize(Policy =CustomPolicyNames.Manager)]
     public class UserController : BaseController<UserController>
     {
         private readonly IUserManager _userManager;
@@ -61,7 +61,7 @@ namespace TaskManager.Presentation.Web.Controllers.Admin.Identity.Users
         {
             if (ModelState.IsValid)
             {
-                model.AccountType = Roles.Admin;
+                model.AccountType = Roles.Employee;
                 string origin = GetOrigin();
                 var savedDataResponse = await _userManager.CreateUserAsync(model, origin);
                 if (savedDataResponse.Succeeded)

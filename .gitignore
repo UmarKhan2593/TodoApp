@@ -60,3 +60,7 @@ Application\obj
 /OiPub.API/obj/Debug/net6.0/ref/
 /OiPub.API/obj/Debug/net6.0/
 /OiPub.API/obj/
+/TaskManager.Presentation.Web.Infrastructure/bin/Debug/net6.0/
+/Infrastructure/bin/Debug/net6.0/
+/Infrastructure/obj/Infrastructure.csproj.nuget.g.targets
+/OiPub.API/obj/TaskManager.API.csproj.nuget.g.targets

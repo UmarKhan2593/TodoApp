@@ -41,11 +41,11 @@ namespace TaskManager.Presentation.Web.Controllers.Admin
         [HttpGet]
         public IActionResult LogIn(string returnUrl = null)
         {
-            if (_currentUser.IsAuthenticated() && (_currentUser.IsInRole(Roles.Admin) || _currentUser.IsInRole(Roles.SuperAdmin)))
+            if (_currentUser.IsAuthenticated() && (_currentUser.IsInRole(Roles.Manager) || _currentUser.IsInRole(Roles.Supervisor)))
             {
                 return RedirectToAction("Index", "AdminDashboard");
             }
-            else if (_currentUser.IsInRole(Roles.Consumer))
+            else if (_currentUser.IsInRole(Roles.Employee))
             {
                 return RedirectToAction("Search", "Home");
             }
@@ -69,11 +69,11 @@ namespace TaskManager.Presentation.Web.Controllers.Admin
                 if (result.Succeeded)
                 {
 
-                    if (result.Data.Roles.Contains(Roles.Admin) || result.Data.Roles.Contains(Roles.SuperAdmin))
+                    if (result.Data.Roles.Contains(Roles.Manager) || result.Data.Roles.Contains(Roles.Supervisor))
                     {
                         return RedirectToAction("Index", "AdminDashboard");
                     }
-                    else if (result.Data.Roles.Contains(Roles.Consumer))
+                    else if (result.Data.Roles.Contains(Roles.Employee))
                     {
                         if (!string.IsNullOrWhiteSpace(returnUrl) && Url.IsLocalUrl(returnUrl))
                         {
@@ -135,7 +135,7 @@ namespace TaskManager.Presentation.Web.Controllers.Admin
             if (ModelState.IsValid)
             {
                 model.EmailConfirmed = false;
-                model.AccountType = Roles.Consumer;
+                model.AccountType = Roles.Employee;
                 string origin = GetOrigin();
                 var savedDataResponse = await _userManager.CreateUserAsync(model, origin);
                 if (savedDataResponse.Succeeded)
@@ -154,7 +154,7 @@ namespace TaskManager.Presentation.Web.Controllers.Admin
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> LogOut()
         {
-            var isAdmin = (_currentUser.IsInRole(Roles.Admin) || _currentUser.IsInRole(Roles.SuperAdmin));
+            var isAdmin = (_currentUser.IsInRole(Roles.Manager) || _currentUser.IsInRole(Roles.Supervisor));
             var result = await _authenticationManager.Logout();
             if (!result.Succeeded)
             {
