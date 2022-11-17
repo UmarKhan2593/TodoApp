@@ -33,12 +33,14 @@ namespace OiPub.API
             #region >>> DB Context Configuration <<<
             if (Configuration.GetValue<bool>(ConfigurationConstants.DbContextConfigConst.InMemoryDatabase))
             {
-
+                services.AddDbContext<IdentityContext>(options =>
+                    options.UseInMemoryDatabase(ConfigurationConstants.DbContextConfigConst.IdentityDbName));
                 services.AddDbContext<ApplicationDbContext>(options =>
                    options.UseInMemoryDatabase(ConfigurationConstants.DbContextConfigConst.ApplicationDbName));
             }
             else
             {
+                services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString(ConfigurationConstants.DbContextConfigConst.IdentityConnection)));
                 services.AddDbContext<ApplicationDbContext>(
                                                 options => options.UseSqlServer(Configuration.GetConnectionString(ConfigurationConstants.DbContextConfigConst.ApplicationConnection),
                                                 b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));

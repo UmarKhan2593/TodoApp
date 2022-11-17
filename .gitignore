@@ -64,3 +64,5 @@ Application\obj
 /Infrastructure/bin/Debug/net6.0/
 /Infrastructure/obj/Infrastructure.csproj.nuget.g.targets
 /OiPub.API/obj/TaskManager.API.csproj.nuget.g.targets
+/Application/bin/Debug/net6.0/Application.deps.json
+/Domain/bin/Debug/net6.0/Domain.deps.json
