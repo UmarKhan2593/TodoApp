@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Presentation.We
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApplication", "WebApplication", "{C76E5BA3-F45B-4AAB-9227-22AE0780262B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Presentation.Web.Infrastructure", "TaskManager.Presentation.Web.Infrastructure\TaskManager.Presentation.Web.Infrastructure.csproj", "{DF8F199C-AC43-4BD9-B38C-48BC8241A76C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Presentation.Web.Infrastructure", "TaskManager.Presentation.Web.Infrastructure\TaskManager.Presentation.Web.Infrastructure.csproj", "{DF8F199C-AC43-4BD9-B38C-48BC8241A76C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

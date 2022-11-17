@@ -23,14 +23,6 @@ namespace OiPub.API.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        /// <summary>
-        /// Get all paper data
-        /// </summary>
-        /// <param name="pageNumber"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="searchString"></param>
-        /// <param name="orderBy"></param>
-        /// <returns>Status 200 OK</returns>
         [HttpGet]
         public async Task<IActionResult> GetAll(int pageNumber, int pageSize, string searchString, string orderBy = null)
         {
@@ -45,52 +37,29 @@ namespace OiPub.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create(CreateTaskRequest requestData)
+        {
+            TodoItem data = new()
+            {
+                Name = requestData.Name,
+                Points = requestData.Points,
+                Status = requestData.Status,
+                AssigenedTo = requestData.AssigenedTo,
+               
+            };
+            await _unitOfWork.TodoItemRepository.AddAsync(data);
+            await _unitOfWork.Commit(new CancellationToken());
+            return Ok(await Result<int>.SuccessAsync(data.Id, "Paper Saved"));
 
-        ///// <summary>
-        ///// Create a paper
-        ///// </summary>
-        ///// <param requestData="Data to create paper"></param>
-        ///// <returns>Status 200 OK</returns>
-        //[HttpPost("Create")]
-        //public async Task<IActionResult> Create(CreatePaperRequest requestData)
-        //{
-        //    Papers data = new()
-        //    {
-        //        Title = requestData.Title,
-        //        Authors = requestData.Authors,
-        //        DatePublished = requestData.DatePublished,
-        //        NumberofCitations = requestData.NumberofCitations,
-        //        ReferenceCount = requestData.ReferenceCount,
-        //        NumberOfRead = requestData.NumberOfRead
-        //    };
-        //    await _unitOfWork.papersRepository.AddAsync(data);
-        //    await _unitOfWork.Commit(new CancellationToken());
-        //    return Ok(await Result<int>.SuccessAsync(data.Id, "Paper Saved"));
+        }
 
-        //}
-
-
-        ///// <summary>
-        ///// Get a paper by Id
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <returns>Status 200 OK</returns>
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetById(int id)
-        //{
-
-        //    var paperData = await _unitOfWork.papersRepository.GetByIdAsync(id, new CancellationToken());
-
-        //    paperData.NumberOfRead = (++paperData.NumberOfRead) ?? 1;
-
-        //    await _unitOfWork.papersRepository.UpdateAsync(paperData);
-
-
-        //    await _unitOfWork.Commit(new CancellationToken());
-
-
-        //    return Ok(await Result<Papers>.SuccessAsync(paperData));
-        //}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var paperData = await _unitOfWork.TodoItemRepository.GetByIdAsync(id, new CancellationToken());
+            return Ok(await Result<TodoItem>.SuccessAsync(paperData));
+        }
 
 
 
