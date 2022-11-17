@@ -26,12 +26,12 @@ namespace Infrastructure.Repositories
             Expression<Func<TodoItem, GetAllTasksResponse>> expression = e => new GetAllTasksResponse
             {
                 Id = e.Id,
-                //Authors = e.Authors,
-                //DatePublished = e.DatePublished,
-                //NumberofCitations = e.NumberofCitations,
-                //ReferenceCount = e.ReferenceCount,
-                //Title = e.Title,
-                //NumberOfRead = e.NumberOfRead
+                Authors = e.Name,
+                DatePublished = e.Points,
+                NumberofCitations = e.NumberofCitations,
+                ReferenceCount = e.ReferenceCount,
+                Title = e.Title,
+                NumberOfRead = e.NumberOfRead
             };
             var data = Entities
                        .Select(expression);

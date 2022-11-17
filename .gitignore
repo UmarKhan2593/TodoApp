@@ -171,3 +171,10 @@
 /.vs/ProjectEvaluation/taskmanager.metadata.v5.2
 /.vs/ProjectEvaluation/taskmanager.projects.v5.2
 /.vs/TaskManager/v17/.futdcache.v2
+/Application/obj/Debug/net6.0/ref/Application.dll
+/Application/obj/Debug/net6.0/refint/Application.dll
+*.config
+*.BuildWithSkipAnalyzers
+/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/Domain/obj/Debug/net6.0/refint/Domain.dll
+/Domain/obj/Debug/net6.0/ref/Domain.dll

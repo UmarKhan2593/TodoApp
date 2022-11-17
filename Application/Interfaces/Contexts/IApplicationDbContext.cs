@@ -19,7 +19,7 @@ namespace Application.Interfaces.Contexts
 
         EntityEntry Entry(object entity);
 
-       //DbSet<TodoItem> Papers { get; set; }
+       DbSet<TodoItem> TodoItems { get; set; }
 
     }
 }

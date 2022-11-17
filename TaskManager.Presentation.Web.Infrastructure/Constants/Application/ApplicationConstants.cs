@@ -2,7 +2,7 @@
 {
     public static class ApplicationConstants
     {
-        public const string Base_Url = "http://localhost:8084";
+        public const string Base_Url = "https://localhost:44335";
 
     }
 }

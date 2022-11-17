@@ -11,7 +11,7 @@ namespace Application.Interfaces.UnitOfWork
         //IRepositoryAsync<T, TId> Repository<T>() where T : AuditableEntity<TId>;
         #region >>> repositories <<<
 
-        ITodoItemRepositoryAsync papersRepository { get; }
+        ITodoItemRepositoryAsync TodoItemRepository { get; }
 
         #endregion
 

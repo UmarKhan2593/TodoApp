@@ -20,20 +20,5 @@ namespace Application.Extensions
             List<T> items = await source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
             return PaginatedResult<T>.Success(items, count, pageNumber, pageSize);
         }
-
-        public static PaginatedResult<T> ToPaginatedListAsync<T>(this IEnumerable<T> source, int pageNumber, int pageSize) where T : class
-        {
-            Throw.Exception.IfNull(source, nameof(source));
-            pageNumber = pageNumber == 0 ? 1 : pageNumber;
-            pageSize = pageSize == 0 ? 10 : pageSize;
-            long count = source.Count();
-            pageNumber = pageNumber <= 0 ? 1 : pageNumber;
-            List<T> items = source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-            return PaginatedResult<T>.Success(items, count, pageNumber, pageSize);
-        }
-
-
-
-
     }
 }
