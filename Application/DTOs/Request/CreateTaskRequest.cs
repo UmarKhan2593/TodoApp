@@ -1,5 +1,4 @@
-﻿using Application.DTOs.Generic;
-using System;
+﻿using Domain.Entities;
 
 namespace Application.DTOs.Request
 {

@@ -22,7 +22,6 @@ namespace Infrastructure.DbContexts
 
         #region >>> DBSet Collection <<<
         public virtual DbSet<TodoItem> TodoItems { get; set; }
-        public virtual DbSet<UserTodoItem> UserTodoItems { get; set; }
         #endregion
 
 

@@ -28,11 +28,11 @@ namespace Infrastructure.Repositories.UnitOfWork
 
         #region >>> Hold Repository object in unit of work<<< 
 
-        private ITodoItemRepositoryAsync _papersRepository;
+        private ITodoItemRepositoryAsync _TodoItemRepository;
 
-        public ITodoItemRepositoryAsync papersRepository
+        public ITodoItemRepositoryAsync TodoItemRepository
         {
-            get { return _papersRepository ??= new TodoItemRepository(_dbContext); }
+            get { return _TodoItemRepository ??= new TodoItemRepository(_dbContext); }
         }
 
 

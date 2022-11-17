@@ -26,27 +26,27 @@ namespace Infrastructure.Repositories
             Expression<Func<TodoItem, GetAllTasksResponse>> expression = e => new GetAllTasksResponse
             {
                 Id = e.Id,
-                Authors = e.Name,
-                DatePublished = e.Points,
-                NumberofCitations = e.NumberofCitations,
-                ReferenceCount = e.ReferenceCount,
-                Title = e.Title,
-                NumberOfRead = e.NumberOfRead
+                Points = e.Points,
+                Status = e.Status,
+                Name = e.Name,
+                AssigenedTo = e.AssigenedTo,
             };
             var data = Entities
                        .Select(expression);
+
             if (!string.IsNullOrWhiteSpace(requestParameters.SearchString))
             {
-                data = data.Where(x => x.Authors.ToLower().Contains(requestParameters.SearchString.ToLower()) || x.Title.ToLower().Contains(requestParameters.SearchString.ToLower()));
+                data = data.Where(x => x.Name.ToLower().Contains(requestParameters.SearchString.ToLower()));
             }
-
 
             if (requestParameters.OrderBy != null && requestParameters.OrderBy.Any())
             {
                 data = data.OrderBy(requestParameters.OrderBy);
 
             }
+
             var paginatedList = await data.ToPaginatedListAsync(requestParameters.PageNumber, requestParameters.PageSize, cancellationToken);
+
             return paginatedList;
         }
 
